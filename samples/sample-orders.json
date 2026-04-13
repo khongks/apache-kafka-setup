@@ -1,0 +1,47 @@
+{
+  "order_id": "ORD-77294-XJ",
+  "status": "shipped",
+  "created_at": "2026-04-12T14:30:00Z",
+  "currency": "USD",
+  "customer": {
+    "id": "CUST-501",
+    "name": "Alex Rivera",
+    "email": "arivera@example.com",
+    "is_premium_member": true
+  },
+  "items": [
+    {
+      "product_id": "SKU-9920",
+      "name": "Ergonomic Mechanical Keyboard",
+      "quantity": 1,
+      "unit_price": 129.99,
+      "discount": 10.00
+    },
+    {
+      "product_id": "SKU-1145",
+      "name": "USB-C Braided Cable (2m)",
+      "quantity": 2,
+      "unit_price": 15.50,
+      "discount": 0.00
+    }
+  ],
+  "shipping_address": {
+    "street": "123 Innovation Way",
+    "city": "Austin",
+    "state": "TX",
+    "zip_code": "78701",
+    "country": "USA"
+  },
+  "payment": {
+    "method": "Credit Card",
+    "transaction_id": "TXN-88442211",
+    "card_last_four": "4492"
+  },
+  "summary": {
+    "subtotal": 160.99,
+    "tax": 12.88,
+    "shipping_cost": 0.00,
+    "total_discount": 10.00,
+    "grand_total": 150.99
+  }
+}

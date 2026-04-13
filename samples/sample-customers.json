@@ -1,0 +1,54 @@
+Here is a clean, structured sample of a customer JSON file. It includes a variety of data types like strings, numbers, booleans, arrays, and nested objects to reflect a realistic database entry.
+JSON
+
+{
+  "customer_id": "CUST-88294",
+  "active_status": true,
+  "profile": {
+    "first_name": "Elena",
+    "last_name": "Rodriguez",
+    "email": "elena.rod@example.com",
+    "phone": "+1-555-012-3456",
+    "date_of_birth": "1992-05-14"
+  },
+  "address": {
+    "street": "742 Evergreen Terrace",
+    "city": "Springfield",
+    "state": "IL",
+    "postal_code": "62704",
+    "country": "USA"
+  },
+  "membership": {
+    "tier": "Platinum",
+    "join_date": "2023-11-10",
+    "loyalty_points": 1250,
+    "auto_renew": false
+  },
+  "preferences": {
+    "marketing_emails": true,
+    "preferred_language": "en-US",
+    "categories": [
+      "electronics",
+      "home_office",
+      "fitness"
+    ]
+  },
+  "recent_orders": [
+    {
+      "order_id": "ORD-5542",
+      "date": "2026-03-22",
+      "total_amount": 129.99,
+      "status": "delivered"
+    },
+    {
+      "order_id": "ORD-6109",
+      "date": "2026-04-05",
+      "total_amount": 45.50,
+      "status": "shipped"
+    }
+  ],
+  "metadata": {
+    "last_login": "2026-04-13T18:24:00Z",
+    "source": "mobile_app"
+  }
+}
