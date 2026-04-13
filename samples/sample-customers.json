@@ -1,6 +1,3 @@
-Here is a clean, structured sample of a customer JSON file. It includes a variety of data types like strings, numbers, booleans, arrays, and nested objects to reflect a realistic database entry.
-JSON
-
 {
   "customer_id": "CUST-88294",
   "active_status": true,
