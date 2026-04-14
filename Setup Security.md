@@ -27,6 +27,7 @@ Add or update the following settings:
 listeners=PLAINTEXT://:9092,CONTROLLER://:9093,SASL_PLAINTEXT://:9094
 listener.security.protocol.map=CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT,SASL_PLAINTEXT:SASL_PLAINTEXT
 advertised.listeners=PLAINTEXT://localhost:9092,CONTROLLER://localhost:9093,SASL_PLAINTEXT://localhost:9094
+advertised.listeners=PLAINTEXT://<yourhostname>:9092,CONTROLLER://<yourhostname>:9093,SASL_PLAINTEXT://<yourhostname>:9094
 
 # 2. Enable SCRAM-SHA-512
 sasl.enabled.mechanisms=SCRAM-SHA-512
@@ -78,6 +79,27 @@ sasl.jaas.config=org.apache.kafka.common.security.scram.ScramLoginModule require
    bin/kafka-console-consumer.sh --bootstrap-server localhost:9094 \
    --topic test-sasl --from-beginning \
    --command-config config/client-auth.conf
+   ```
+
+5. client-auth.conf
+   ```
+   security.protocol=SASL_PLAINTEXT
+   sasl.mechanism=SCRAM-SHA-512
+   sasl.jaas.config=org.apache.kafka.common.security.scram.ScramLoginModule required \
+    username="admin" \
+    password="admin-password";
+   ```
+
+6. client-auth-eem.conf
+   ```
+   security.protocol=SASL_SSL
+   sasl.mechanism=PLAIN
+   sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required \
+    username=<username> \
+    password=<password>;
+   ssl.truststore.location=/root/kafka_2.13-4.2.0/kafka.truststore.jks
+   ssl.truststore.password=<password>
+   ssl.endpoint.identification.algorithm=https
    ```
 
 ---
